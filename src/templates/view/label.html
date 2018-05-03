@@ -1,0 +1,6 @@
+<label>
+  <span><%= Ccreator.helpers.simple_format(rf.get(Ccreator.options.mappings.LABEL)) %>
+  <% if (rf.get(Ccreator.options.mappings.REQUIRED)) { %>
+    <abbr title='required'>*</abbr>
+  <% } %>
+</label>

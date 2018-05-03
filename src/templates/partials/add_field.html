@@ -1,0 +1,12 @@
+<div class='fb-tab-pane active' id='addField'>
+  <div class='fb-add-field-types'>
+    <div class='section'>
+      <% _.each(_.sortBy(Ccreator.inputFields, 'order'), function(f){ %>
+        <a data-field-type="<%= f.field_type %>" class="<%= Ccreator.options.BUTTON_CLASS %> <%= f.identity%>">
+          <%= f.addButton %>
+        </a>
+      <% }); %>
+    </div>
+
+  </div>
+</div>

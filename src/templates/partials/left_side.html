@@ -1,0 +1,19 @@
+<div class='fb-left'>
+  <ul class='fb-tabs'>
+    <li class='active'>
+    	<a data-target='#addField'><i class="fa fa-puzzle-piece icon-left-menu" aria-hidden="true"></i></a>
+    </li>
+    <li class="theme">
+    	<a data-target='#themeField'><i class="fa fa-th-large icon-left-menu" aria-hidden="true"></i></a>
+    </li>
+    <li>
+    	<a data-target='#editField'><i class="fa fa-pencil-square-o icon-left-menu" aria-hidden="true"></i></a>
+    </li>
+  </ul>
+
+  <div class='fb-tab-content'>
+    <%= Ccreator.templates['partials/add_field']() %>
+    <%= Ccreator.templates['partials/theme_field']() %>
+    <%= Ccreator.templates['partials/edit_field']() %>
+  </div>
+</div>

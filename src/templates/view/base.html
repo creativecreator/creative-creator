@@ -1,0 +1,13 @@
+<div class='subtemplate-wrapper'>
+  <div class='cover'></div>
+  <% if (route != 'interior') { %>
+  <%= Ccreator.templates['view/label']({rf: rf}) %>
+
+  
+
+  <%= Ccreator.templates['view/description']({rf: rf}) %>
+  <%= Ccreator.templates['view/duplicate_remove']({rf: rf}) %>
+  <% } %>
+  <%= Ccreator.fields[rf.get(Ccreator.options.mappings.FIELD_TYPE)].view({rf: rf}) %>
+  <%= Ccreator.templates['view/duplicate_remove']({rf: rf}) %>
+</div>

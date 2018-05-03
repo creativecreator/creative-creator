@@ -1,0 +1,13 @@
+Formbuilder consists of a few different components that all live in the `Ccreator` namespace:
+
+- `Ccreator.templates` are compiled Underscore.js templates that are used to render the Formbuilder interface. You can see these individual files in the `./templates` directory, but if you're including `ccreator.js`, you don't need to worry about them.
+
+- `Ccreator.fields` are the different kinds of inputs that users can add to their forms. We expose a simple API, `Ccreator.registerField()`, that allows you to add more kinds of inputs.
+
+- `Ccreator.views`
+
+Because of its modular nature, Formbuilder is easy to customize. Most of the configuration lives in class variables, which means you can simply override a template or method. If you have questions, feel free to open an issue -- we've tried to bridge the gap between convention and configuration, but there's no guarantee that we were successful.
+
+On problem in Grunt watch run this commands:
+
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p

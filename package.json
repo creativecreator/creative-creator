@@ -1,0 +1,56 @@
+{
+  "name": "ccreator",
+  "version": "1.1.0",
+  "homepage": "https://mnjroy.bitbucket.io/",
+  "authors": [
+    "mnjroy"
+  ],
+  "maintainers": [
+    "Manoj Roy <mnj.roy627@gmail.com> (http://creative-creator.github.io)"
+  ],
+  "description": "Graphical form builder for the web.",
+  "main": "Gruntfile.coffee",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-coffee-build": "^1.4.12",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt-contrib-jst": "~0.5.1",
+    "grunt-contrib-stylus": "~0.9.0",
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-karma": "~0.6.2",
+    "grunt-release": "~0.6.0",
+    "karma": "~0.10.4",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-mocha": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-safari-launcher": "~0.1.1",
+    "mocha": "~1.13.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "bower": "^1.8.4",
+    "components-font-awesome": "^4.6.3",
+    "grunt": "^0.4.5",
+    "grunt-coffee-build": "^1.4.12",
+    "grunt-contrib-concat": "^0.3.0",
+    "html-svg-connect": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://creative-creator.github.io"
+  },
+  "author": "mnjroy",
+  "license": "MIT"
+}

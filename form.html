@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="project">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+  <title>c-creator</title>
+  <meta name="description" content="A Creative Creator, who can design Form, Flow etc.. ">
+  <meta name="author" content="http://www.actualcoder.com/">
+  <link rel="icon" type="image/png" sizes="96x96" href="vendor/img/favicon.png">
+  
+
+  <!-- Dependency css -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="lib/css/jquery.switchButton.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css"> -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Dependency on Js -->
+  <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="lib/underscore.js"></script>
+  <script type="text/javascript" src="lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="lib/jquery-migrate-3.0.0.min.js"></script>
+
+  <!-- Compiled Javascript -->
+  <script src="vendor/js/vendor.js"></script>
+  <script src="dist/ccreator.js"></script>
+
+  <!-- Compiled CSS -->
+  <link rel="stylesheet" href="vendor/css/vendor.css" />
+  <link rel="stylesheet" href="dist/ccreator.css" />
+</head>
+
+<body>
+
+  
+
+  <div class='fb-main container-fluid'></div> <!-- Main div container --> 
+
+  <script>
+    $(function(){
+
+      var data = [{"label":"Untitled","field_type":"text","required":true,"field_options":{"size":"small"},"cid":"c21","design":{"left":128,"top":81.25}},{"label":"Untitled","field_type":"paragraph","required":true,"field_options":{"size":"small"},"cid":"c25","design":{"left":408,"top":63.5}}]
+
+      window.route = 'form'           //Make type for execute builder
+
+      cc = new Ccreator({
+        selector: '.fb-main',         //  Set main element as C-creator.
+        bootstrapData: data,         // To set Array structure all fields on here.
+        pathStroke: '#5bc0de',        //  To set Flow creator line color.
+        pathOrientation: 'auto',      // To set Flow creator line [horizontal|vertical|auto (default)]. 
+        pathOffset: 0,                // To set Flow creator line offset. 
+        arrowHead: '#55ded2',         // On flow creator line head color would change from here.
+        // type: "flow",              // To set Flow or Form (Its already maintain by window.route).
+        mode:'edit'                   // Mode is two types 1)view 2)edit
+      });
+
+      cc.on('save', function(payload){
+        // payload.fields.flow = JSON.parse(payload.fields[window.route]);
+        // console.log(payload);
+        console.log(payload);
+        
+      })
+    });
+  </script>
+
+  
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76075656-1', 'auto');
+    ga('send', 'pageview');
+
+    
+  </script>
+  <!-- End Google Analytics -->
+</body>
+
+</html>

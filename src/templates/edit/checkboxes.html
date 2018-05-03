@@ -1,0 +1,31 @@
+<% if(route == 'form') { %>
+<label>
+	<h5>Required:</h5>
+  <input type='checkbox' data-rv-checked='model.<%= Ccreator.options.mappings.REQUIRED %>' />
+  
+</label>
+<!-- label>
+  <input type='checkbox' data-rv-checked='model.<%= Ccreator.options.mappings.ADMIN_ONLY %>' />
+  Admin only
+</label -->
+<% } else if(route == 'flow') { %>
+<label class="switch-wrapper">
+	<h5>Live:</h5>
+  <input type='checkbox' data-rv-checked='model.<%= Ccreator.options.mappings.REQUIRED %>' />
+  
+</label>
+<% } else { %>
+<label class="switch-wrapper">
+  <input type="checkbox" value="1" data-rv-checked='model.<%= Ccreator.options.mappings.CHECKED %>'>
+</label>
+<div class="toggle toggle-modern">
+<% } %>
+
+<script type="text/javascript">
+	$(function() {
+		$('.switch-wrapper input[type=checkbox]').switchButton({
+            on_label: 'ON',
+            off_label: 'OFF'
+          })
+	});
+</script>
